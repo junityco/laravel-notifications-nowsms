@@ -1,8 +1,8 @@
 {
-	"name": "junityco/laravel-notifications-nowsms",
-    "description": "NowSMS Notification Channel",
+    "name": "junityco/laravel-nowsms",
+    "description": "NowSMS service provider for Laravel",
     "keywords": ["nowsms", "sms", "laravel", "notifications"],
-    "homepage": "https://github.com/junityco/laravel-notifications-nowsms",
+    "homepage": "https://github.com/junityco/laravel-nowsms",
     "license": "MIT",
     "authors": [
         {
@@ -13,13 +13,14 @@
     ],
     "require": {
         "php": ">=5.6.4",
+        "nesbot/carbon": "^1.18",
         "guzzlehttp/guzzle": "^6.2",
-        "illuminate/notifications": "^5.3",
-        "illuminate/support": "^5.3"
+        "illuminate/notifications": "5.3.* || 5.4.*",
+        "illuminate/support": "5.3.* || 5.4.*"
     },
     "autoload": {
         "psr-4": {
-            "Junity\\Notifications\\NowSms\\": "src"
+            "Junity\\NowSms\\": "src"
         }
     },
     "config": {
