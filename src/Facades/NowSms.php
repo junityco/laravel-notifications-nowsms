@@ -2,8 +2,8 @@
 
 namespace Junity\NowSms\Facades;
 
-use Junity\NowSms\NowSms;
 use Illuminate\Support\Facades\Facade;
+use Junity\NowSms\NowSms as BaseNowSms;
 
 /**
  * @see \Junity\NowSms\NowSms
