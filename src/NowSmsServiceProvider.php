@@ -1,6 +1,6 @@
 <?php
 
-namespace Junity\Notifications\NowSms;
+namespace Junity\NowSms;
 
 use GuzzleHttp\Client as HttpClient;
 use Illuminate\Support\ServiceProvider;

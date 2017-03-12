@@ -6,7 +6,7 @@ use Exception;
 use GuzzleHttp\Client as HttpClient;
 use Junity\NowSms\Messages\SmsMessage;
 use GuzzleHttp\Exception\RequestException;
-use Junity\Notifications\NowSms\Exceptions\CouldNotSendNotification;
+use Junity\NowSms\Exceptions\CouldNotSendNotification;
 
 class NowSms
 {

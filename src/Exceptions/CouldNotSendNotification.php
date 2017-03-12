@@ -1,6 +1,6 @@
 <?php
 
-namespace Junity\Notifications\NowSms\Exceptions;
+namespace Junity\NowSms\Exceptions;
 
 use Exception;
 use Psr\Http\Message\ResponseInterface;
