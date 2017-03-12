@@ -8,18 +8,16 @@ use Illuminate\Support\ServiceProvider;
 class NowSmsServiceProvider extends ServiceProvider
 {
     /**
-     * Bootstrap the application services.
+     * Register the application services.
      *
      * @return void
      */
-    public function boot()
+    public function register()
     {
-    	$this->app->when(NowSmsChannel::class)
-    		->needs(NowSms::class)
-    		->give(function () {
-    			$config = $this->app['config']['services.nowsms'];
+        $this->app->bind(NowSms::class, function () {
+            $config = $this->app['config']['services.nowsms'];
 
-    			return new NowSms(new HttpClient, $config);
-    		});
+            return new NowSms(new HttpClient, $config);
+        });
     }
 }
