@@ -1,6 +1,6 @@
 <?php
 
-namespace Junity\NowSms;
+namespace Junity\NowSms\Facades;
 
 use Junity\NowSms\NowSms;
 use Illuminate\Support\Facades\Facade;
