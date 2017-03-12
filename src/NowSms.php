@@ -85,7 +85,7 @@ class NowSms
      */
     public function getAuthParams()
     {
-        $user = $this->config['user'];
+        $user = $this->config['username'];
         $password = $this->config['password'];
 
         return [$user, $password];
