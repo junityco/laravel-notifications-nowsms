@@ -17,6 +17,6 @@ class NowSms extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return NowSms::class;
+        return BaseNowSms::class;
     }
 }
