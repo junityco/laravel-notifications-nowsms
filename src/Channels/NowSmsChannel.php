@@ -51,8 +51,12 @@ class NowSmsChannel extends ServiceProvider
 
     	$message = $notification->toNowSms($notifiable);
 
+        if (is_string($message)) {
+            $message = new SmsMessage($message);
+        }
+
     	try {
-    		$this->nowsms->send($message, $receiver);
+    		$this->nowsms->send($message->toArray(), $receiver);
     	} catch (Exception $exception) {
             $this->events->fire(
                 new NotificationFailed($notifiable, $notification, 'nowsms', ['message' => $exception->getMessage()])

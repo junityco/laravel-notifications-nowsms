@@ -39,21 +39,17 @@ class NowSms
     /**
      * Send NowSMS message.
      *
-     * @param  mixed  $message
+     * @param  array  $params
      * @param  string  $receiver
      * @return \Psr\Http\Message\ResponseInterface
      * @throws CouldNotSendNotification
      */
-    public function send($message, $receiver)
-    {
-        if (is_string($message)) {
-            $message = new SmsMessage($message);
-        }
-        
+    public function send($params, $receiver)
+    {   
         try {
             return $this->http->post($this->getUrl(), [
                 'auth' => $this->getAuthParams(),
-                'form_params' => array_merge($message->toArray(), [
+                'form_params' => array_merge($params, [
                     'Phone' => $receiver
                 ])
             ]);
